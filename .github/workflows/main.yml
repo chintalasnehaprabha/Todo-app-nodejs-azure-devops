@@ -1,0 +1,23 @@
+name: Sync GitHub to Azure DevOps
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub repo
+        uses: actions/checkout@v3
+
+      - name: Push to Azure DevOps
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git remote add azure https://$(echo $AZURE_USER):$(echo $AZURE_PAT)@dev.azure.com/<org>/<project>/_git/<repo-name>
+          git push azure main --force
+        env:
+          AZURE_USER: <your-azure-username>
+          AZURE_PAT: ${{ secrets.AZURE_PAT }}
