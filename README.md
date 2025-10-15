@@ -1,5 +1,5 @@
 📋 Prerequisites
-
+-------------------------------------------------------------------------------------
 Before you begin, ensure that you have:
 
 A valid Azure Account
@@ -11,7 +11,7 @@ A Node.js project hosted on GitHub
 Access to create and manage Azure App Services
 
 ⚙️ Step 1: Create Azure App Service
-
+----------------------------------------------------------------------------------------
 Sign in to Azure Portal
 .
 
@@ -32,7 +32,7 @@ Complete the setup and create the App Service.
 Once deployed, note your App Service name — you’ll need it in the next step.
 
 🔄 Step 2: Connect GitHub Repository to Azure App Service
-
+-------------------------------------------------------------------------------------------------
 Go to your created App Service in the Azure Portal.
 
 Select Deployment Center from the left-hand menu.
@@ -55,7 +55,7 @@ Azure will automatically generate a GitHub Actions workflow file in your reposit
 .github/workflows/azure-webapps-node.yml
 
 🔐 Step 3: Add Azure Publish Profile as GitHub Secret
-
+-----------------------------------------------------------------------------------------------------------------
 In the Azure Portal, open your App Service.
 
 Go to Deployment Center → Manage Publish Profile.
@@ -76,7 +76,7 @@ AZUREAPPSERVICE_PUBLISHPROFILE
 Paste the copied XML content as the value.
 
 ⚡ Step 4: Configure GitHub Actions
-
+---------------------------------------------------------------------------------------------------------------
 The workflow file created automatically will:
 
 Trigger on every push to the main branch
@@ -94,7 +94,7 @@ You can review or adjust this workflow in:
 .github/workflows/azure-webapps-node.yml
 
 🚀 Step 5: Deploy Automatically
-
+--------------------------------------------------------------------------------------------------------------
 Once setup is complete:
 
 Commit and push any change to the main branch in GitHub.
@@ -108,21 +108,22 @@ Deploy it to your configured Azure App Service
 You can track the deployment progress under the Actions tab in your GitHub repository.
 
 🌐 Step 6: Verify Deployment
-
+-------------------------------------------------------------------------------------------------------------------------------------------------
 After the GitHub Actions workflow completes successfully:
 
 Open your Azure App Service URL in the browser.
 Example:
 
 https://your-app-service-name.azurewebsites.net
-<img width="1051" height="339" alt="image" src="https://github.com/user-attachments/assets/0fffe854-0bd2-4301-95cc-f2acae6e53e9" />
+<img width="795" height="348" alt="image" src="https://github.com/user-attachments/assets/744aa460-4709-467b-837e-38441edfc555" />
+
 
 
 
 Your app should now be live and automatically updated on every push to main.
 
 🧾 Summary
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 ✅ Source Control: GitHub
 ✅ CI/CD Pipeline: GitHub Actions
 ✅ Hosting Platform: Azure App Service
