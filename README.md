@@ -115,6 +115,8 @@ Open your Azure App Service URL in the browser.
 Example:
 
 https://your-app-service-name.azurewebsites.net
+<img width="1051" height="339" alt="image" src="https://github.com/user-attachments/assets/0fffe854-0bd2-4301-95cc-f2acae6e53e9" />
+
 
 
 Your app should now be live and automatically updated on every push to main.
